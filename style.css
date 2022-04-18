@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+:root {
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --LightGrey: hsl(217, 12%, 63%);
+    --MediumGrey: hsl(216, 12%, 54%);
+    --DarkBlue: hsl(213, 19%, 18%);
+    --VeryDarkBlue: hsl(216, 12%, 8%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+p {
+    font-size: 15px;
+}
+body {
+    font-family: 'Overpass' ,sans-serif;
+    background-color: var(--VeryDarkBlue);
+
+}
+.main {
+    display: grid;
+    place-items:center;
+    height: 100vh;
+}
+.card {
+    background-color: var(--DarkBlue);
+    width: 400px;
+    padding:30px;
+    border-radius: 15px;   
+}
+.card .star {
+    margin-bottom: 4%;
+    background-color:hsla(216, 12%, 54%,10%);
+    padding: 15px;
+    border-radius: 50%;
+}
+.card .row {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    list-style: none;
+    font-size: 18px;
+    color: var(--MediumGrey);
+}
+.card .row li {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: hsla(216, 12%, 54%,10%);
+}
+.card .row li:hover {
+    background-color: var(--Orange);
+    color: white;
+    transition: all .3s;
+}
+.card h1 {
+    color: var(--White);
+    font-weight: 500    ;
+}
+.card p {
+    font-weight: 400;
+    margin: 15px 0;
+    font-size: 17px;
+    color: var(--LightGrey);
+}
+.card button {
+    background-color: var(--Orange);
+    border: 0;
+    font-size: 15px;
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 100px;
+    margin-top: 5px;
+    color: var(--White);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.card button:hover {
+    background-color: var(--White);
+    color: var(--Orange);
+    transition: all .3s;
+}
+.card .ilustartion {
+    margin: auto;
+    display: block;
+}
+.card h3 {
+    background-color: hsla(216, 12%, 54%,10%);
+    border-radius: 100px;
+    color: var(--Orange);
+    width: 250px;
+    margin: 15px auto;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+.card .naslov {
+    text-align: center;
+}
+.card .paragraf {
+    text-align: center;
+}
+.card1 {
+    display: none;
+}
+@media screen and (max-width:450px) {
+    .card {
+        width: 80%;
+        padding: 20px;
+    }
+    .row li {
+        width: 40px;
+        height: 40px;
+    }
+}
